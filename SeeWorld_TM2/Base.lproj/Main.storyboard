@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Base View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BaseViewController" customModule="SeeWorld_TM2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okn-Te-AYX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="338"/>
+                                <connections>
+                                    <segue destination="Axj-mh-1UE" kind="embed" id="b6e-VP-s8J"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQf-TQ-GW7">
+                                <rect key="frame" x="0.0" y="332" width="375" height="335"/>
+                                <connections>
+                                    <segue destination="cpX-S4-qer" kind="embed" id="3Xg-Zj-9CG"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="okn-Te-AYX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0Ls-YZ-pWC"/>
+                            <constraint firstItem="okn-Te-AYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Wu-1S-r4d"/>
+                            <constraint firstItem="okn-Te-AYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8lm-Hc-xHD"/>
+                            <constraint firstItem="wQf-TQ-GW7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="S1E-mY-GBm"/>
+                            <constraint firstItem="wQf-TQ-GW7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="312" id="VcD-Rb-PGW"/>
+                            <constraint firstItem="okn-Te-AYX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W00-QA-UPr"/>
+                            <constraint firstItem="okn-Te-AYX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aqR-p1-8Fq"/>
+                            <constraint firstAttribute="bottom" secondItem="wQf-TQ-GW7" secondAttribute="bottom" id="b22-v7-9Qg"/>
+                            <constraint firstItem="wQf-TQ-GW7" firstAttribute="top" secondItem="okn-Te-AYX" secondAttribute="bottom" constant="-6" id="dC8-db-jAQ"/>
+                            <constraint firstItem="wQf-TQ-GW7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uUe-iH-h3x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="127.28635682158921"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="7kf-1j-56Y">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Axj-mh-1UE" customClass="MapViewController" customModule="SeeWorld_TM2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b6D-VD-CC2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="338"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="752-SH-rF6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="338"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="752-SH-rF6" firstAttribute="top" secondItem="b6D-VD-CC2" secondAttribute="top" id="7pm-WU-62t"/>
+                            <constraint firstAttribute="trailing" secondItem="752-SH-rF6" secondAttribute="trailing" id="Atu-Gf-bMa"/>
+                            <constraint firstAttribute="bottom" secondItem="752-SH-rF6" secondAttribute="bottom" id="BVQ-0X-7Qw"/>
+                            <constraint firstItem="752-SH-rF6" firstAttribute="leading" secondItem="b6D-VD-CC2" secondAttribute="leading" id="WEV-hG-I9A"/>
+                            <constraint firstItem="752-SH-rF6" firstAttribute="trailing" secondItem="fWS-bP-Qep" secondAttribute="trailing" id="ZKy-4x-uui"/>
+                            <constraint firstItem="752-SH-rF6" firstAttribute="top" secondItem="b6D-VD-CC2" secondAttribute="top" id="Zeb-7E-v2q"/>
+                            <constraint firstItem="752-SH-rF6" firstAttribute="leading" secondItem="fWS-bP-Qep" secondAttribute="leading" id="t5k-TC-pUI"/>
+                            <constraint firstAttribute="bottom" secondItem="752-SH-rF6" secondAttribute="bottom" id="yV4-Mv-9yD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fWS-bP-Qep"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="752-SH-rF6" id="XkX-uf-A8e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqa-Km-3lT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917.60000000000002" y="56.527093596059117"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="NB5-bn-7pn">
+            <objects>
+                <viewController id="cpX-S4-qer" customClass="TextViewController" customModule="SeeWorld_TM2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GEb-TW-nq7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="335"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3XN-Gn-ISK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="335"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-ui-BM9">
+                                <rect key="frame" x="144" y="288" width="86" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="microphoneTapped:" destination="cpX-S4-qer" eventType="touchUpInside" id="DWd-ff-f5J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bu2-ui-BM9" firstAttribute="top" secondItem="aFc-eZ-Tod" secondAttribute="top" constant="288" id="BlA-hW-Tvb"/>
+                            <constraint firstItem="bu2-ui-BM9" firstAttribute="bottom" secondItem="aFc-eZ-Tod" secondAttribute="bottom" constant="-10" id="NXs-Mx-cmp"/>
+                            <constraint firstItem="3XN-Gn-ISK" firstAttribute="top" secondItem="GEb-TW-nq7" secondAttribute="top" id="Qu7-Lw-XXe"/>
+                            <constraint firstItem="3XN-Gn-ISK" firstAttribute="leading" secondItem="aFc-eZ-Tod" secondAttribute="leading" id="Qyt-BH-Tv5"/>
+                            <constraint firstItem="bu2-ui-BM9" firstAttribute="leading" secondItem="aFc-eZ-Tod" secondAttribute="leading" constant="144" id="cGx-la-0rP"/>
+                            <constraint firstItem="3XN-Gn-ISK" firstAttribute="trailing" secondItem="aFc-eZ-Tod" secondAttribute="trailing" id="egp-39-5qD"/>
+                            <constraint firstItem="aFc-eZ-Tod" firstAttribute="trailing" secondItem="bu2-ui-BM9" secondAttribute="trailing" constant="145" id="ftR-vz-5fw"/>
+                            <constraint firstAttribute="bottom" secondItem="3XN-Gn-ISK" secondAttribute="bottom" id="jQ0-4S-hq2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aFc-eZ-Tod"/>
+                    </view>
+                    <connections>
+                        <outlet property="microphoneButton" destination="bu2-ui-BM9" id="E9y-Xc-X9j"/>
+                        <outlet property="textView" destination="3XN-Gn-ISK" id="QAo-aH-TJM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8z-GK-5Lp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917.60000000000002" y="493.5960591133005"/>
+        </scene>
+    </scenes>
+</document>
