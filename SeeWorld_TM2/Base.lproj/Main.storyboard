@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,17 +19,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BaseViewController" customModule="SeeWorld_TM2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okn-Te-AYX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="338"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                                 <connections>
                                     <segue destination="Axj-mh-1UE" kind="embed" id="b6e-VP-s8J"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQf-TQ-GW7">
-                                <rect key="frame" x="0.0" y="332" width="375" height="335"/>
+                                <rect key="frame" x="0.0" y="403" width="414" height="333"/>
                                 <connections>
                                     <segue destination="cpX-S4-qer" kind="embed" id="3Xg-Zj-9CG"/>
                                 </connections>
@@ -41,11 +41,11 @@
                             <constraint firstItem="okn-Te-AYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Wu-1S-r4d"/>
                             <constraint firstItem="okn-Te-AYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8lm-Hc-xHD"/>
                             <constraint firstItem="wQf-TQ-GW7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="S1E-mY-GBm"/>
-                            <constraint firstItem="wQf-TQ-GW7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="312" id="VcD-Rb-PGW"/>
                             <constraint firstItem="okn-Te-AYX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W00-QA-UPr"/>
                             <constraint firstItem="okn-Te-AYX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aqR-p1-8Fq"/>
                             <constraint firstAttribute="bottom" secondItem="wQf-TQ-GW7" secondAttribute="bottom" id="b22-v7-9Qg"/>
                             <constraint firstItem="wQf-TQ-GW7" firstAttribute="top" secondItem="okn-Te-AYX" secondAttribute="bottom" constant="-6" id="dC8-db-jAQ"/>
+                            <constraint firstItem="wQf-TQ-GW7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="383" id="k8J-Hq-8RG"/>
                             <constraint firstItem="wQf-TQ-GW7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uUe-iH-h3x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -53,18 +53,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="127.28635682158921"/>
+            <point key="canvasLocation" x="-84" y="127.09359605911331"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="7kf-1j-56Y">
             <objects>
                 <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Axj-mh-1UE" customClass="MapViewController" customModule="SeeWorld_TM2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b6D-VD-CC2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="338"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="752-SH-rF6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="338"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,19 +91,19 @@
         <!--Text View Controller-->
         <scene sceneID="NB5-bn-7pn">
             <objects>
-                <viewController id="cpX-S4-qer" customClass="TextViewController" customModule="SeeWorld_TM2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TextViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cpX-S4-qer" customClass="TextViewController" customModule="SeeWorld_TM2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GEb-TW-nq7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="335"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3XN-Gn-ISK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="335"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-ui-BM9">
-                                <rect key="frame" x="144" y="288" width="86" height="37"/>
+                                <rect key="frame" x="144" y="288" width="125" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Button"/>
                                 <connections>

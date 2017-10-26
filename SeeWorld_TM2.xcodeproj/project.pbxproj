@@ -18,7 +18,7 @@
 		6465DC271F79A3B600581AB5 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6465DC261F79A3B600581AB5 /* TextViewController.swift */; };
 		648C59E21F79F54C007B1145 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 648C59E31F79F54C007B1145 /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		648C59E51F79F774007B1145 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 648C59E41F79F774007B1145 /* Podfile */; };
-		64C990201F7D7C8100C48A90 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9901F1F7D7C8100C48A90 /* DataModel.swift */; };
+		64C990201F7D7C8100C48A90 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9901F1F7D7C8100C48A90 /* WeatherDataModel.swift */; };
 		64D421C81F79A869005E57A9 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D421C71F79A869005E57A9 /* Speech.framework */; };
 		FC5DD31EAA84F445964E8F6F /* Pods_SeeWorld_TM2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58712C7BA75CA1840122AAA /* Pods_SeeWorld_TM2.framework */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 		6465DC261F79A3B600581AB5 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		648C59E31F79F54C007B1145 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		648C59E41F79F774007B1145 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		64C9901F1F7D7C8100C48A90 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		64C9901F1F7D7C8100C48A90 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		64D421C71F79A869005E57A9 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		7CB84EC13C0C40F5B77D76F2 /* Pods-SeeWorld_TM2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeWorld_TM2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeeWorld_TM2/Pods-SeeWorld_TM2.debug.xcconfig"; sourceTree = "<group>"; };
 		C58712C7BA75CA1840122AAA /* Pods_SeeWorld_TM2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeeWorld_TM2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +99,7 @@
 				6465DC191F799DCD00581AB5 /* Info.plist */,
 				6465DC241F79A02300581AB5 /* MapViewController.swift */,
 				6465DC261F79A3B600581AB5 /* TextViewController.swift */,
-				64C9901F1F7D7C8100C48A90 /* DataModel.swift */,
+				64C9901F1F7D7C8100C48A90 /* WeatherDataModel.swift */,
 			);
 			path = SeeWorld_TM2;
 			sourceTree = "<group>";
@@ -246,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64C990201F7D7C8100C48A90 /* DataModel.swift in Sources */,
+				64C990201F7D7C8100C48A90 /* WeatherDataModel.swift in Sources */,
 				6465DC101F799DCD00581AB5 /* ViewController.swift in Sources */,
 				6465DC251F79A02300581AB5 /* MapViewController.swift in Sources */,
 				6465DC0E1F799DCD00581AB5 /* AppDelegate.swift in Sources */,

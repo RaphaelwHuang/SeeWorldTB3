@@ -24,7 +24,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var _latEnd: Double = 0.0
     
     @IBOutlet weak var mapView: MKMapView!
-    
+   
     let locationManager = CLLocationManager()
     
     // Get value from the TextViewController
@@ -38,6 +38,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
         
     }
     
@@ -142,26 +143,42 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 self._latEnd = latitude!
                 self._lonEnd = longitude!
                 
-                //Create annotation
-                let annotation = MKPointAnnotation()
-                annotation.title = self.input
-                annotation.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
-                self.mapView.addAnnotation(annotation)
                 
-                //Zooming in on annotation
-                let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude!, longitude!)
-                let span = MKCoordinateSpanMake(0.1, 0.1)
-                let region = MKCoordinateRegionMake(coordinate, span)
-                self.mapView.setRegion(region, animated: true)
-                
+//                //Create annotation
+//                let objectAnnotation = MKPointAnnotation()
+//                objectAnnotation.coordinate = CLLocation(latitude: self._latEnd,longitude: self._lonEnd).coordinate
+//                objectAnnotation.title = self.input
+//                self.mapView.addAnnotation(objectAnnotation)
+//
+//                //Zooming in on annotation
+//                let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(self._latEnd, self._lonEnd)
+//
+//                let span = MKCoordinateSpanMake(0.1, 0.1)
+//                let region = MKCoordinateRegionMake(coordinate, span)
+//                self.mapView.setRegion(region, animated: true)
+
                 // Call ETA
                 self.getETA(textView)
-                
-       
-                
+                self.updateLoc(latitude: self._latEnd, longitude: self._lonEnd)
             }
             
         }
+    }
+    // Update Loc
+    func updateLoc(latitude: Double, longitude: Double) {
+        //Create annotation
+        let objectAnnotation = MKPointAnnotation()
+        objectAnnotation.coordinate = CLLocation(latitude: latitude,longitude: longitude).coordinate
+        objectAnnotation.title = self.input
+        self.mapView.addAnnotation(objectAnnotation)
+        
+        //Zooming in on annotation
+        let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        
+        let span = MKCoordinateSpanMake(0.1, 0.1)
+        let region = MKCoordinateRegionMake(coordinate, span)
+        self.mapView.setRegion(region, animated: true)
+        
     }
     
     // ETA func
@@ -231,4 +248,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let launchOptions = [MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeTransit]
         mapItem.openInMaps(launchOptions: launchOptions)
     }
+    
 }
+
